@@ -1049,9 +1049,8 @@ func (c *APIClient) PrepareRequest(
 	postBody interface{},
 	headerParams map[string]string,
 	queryParams url.Values,
-	formParams url.Values,
-	formFiles []formFile) (localVarRequest *http.Request, err error) {
-	return c.prepareRequest(ctx, path, method, postBody, headerParams, queryParams, formParams, formFiles)
+	formParams url.Values) (localVarRequest *http.Request, err error) {
+	return c.prepareRequest(ctx, path, method, postBody, headerParams, queryParams, formParams, nil)
 }
 
 // prepareRequest build the request
